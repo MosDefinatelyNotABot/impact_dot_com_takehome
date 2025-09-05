@@ -4,7 +4,6 @@ import numberrangesummerizer.NumberRangeSummerizer;
 
 import java.util.Collection;
 
-
 final class Main {
 
     private Main() {

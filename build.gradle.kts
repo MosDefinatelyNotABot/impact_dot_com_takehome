@@ -1,10 +1,15 @@
 plugins {
     id("java")
+    id("application")
     id("checkstyle")
     id("pmd")
 }
 group = "org.example"
 version = "1.0-SNAPSHOT"
+
+application {
+    mainClass.set("org.example.Main")
+}
 
 repositories {
     mavenCentral()

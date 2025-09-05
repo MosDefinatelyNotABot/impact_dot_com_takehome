@@ -10,12 +10,13 @@ The project was completed using the gradle build system and Java 21.
 
 ## Running the project
 
-Gradle is used to build and run the project. Gradle also _should_ take care of downloading all dependencies.
-The project can be built using the gradle build command: 
+Once you have cloned the repository, you can run the project using the Gradle build command. 
+Gradle _should_ also take care of downloading any build dependencies like checkstyle and junit.
 
 On unix/Macos systems:
 
 ```
+git clone buildhttps://github.com/MosDefinatelyNotABot/impact_dot_com_takehome.git # clone the repository 
 ./gradlew clean     # cleans existing build artifacts
 ./gradlew build     # builds the project
 ./gradlew test      # runs the unit tests
@@ -25,6 +26,7 @@ On unix/Macos systems:
 On windows systems:
 
 ```
+git clone buildhttps://github.com/MosDefinatelyNotABot/impact_dot_com_takehome.git # clone the repository
 gradlew.bat clean   # cleans existing build artifacts
 gradlew.bat build   # builds the project
 gradlew.bat test    # runs the unit tests

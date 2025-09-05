@@ -20,7 +20,7 @@ public class Main {
         String out_str = summerizer_obj.summarizeCollection(out_col);
 //
         System.out.printf(
-                "The summary of the list of numbers: %s\nis: %s.",
+                "The summary of the list of numbers: %s\nis: %s.\n",
                 input,
                 out_str
         );

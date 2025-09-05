@@ -16,7 +16,7 @@ Gradle _should_ also take care of downloading any build dependencies like checks
 On unix/Macos systems:
 
 ```
-git clone buildhttps://github.com/MosDefinatelyNotABot/impact_dot_com_takehome.git # clone the repository 
+git clone build https://github.com/MosDefinatelyNotABot/impact_dot_com_takehome.git # clone the repository 
 ./gradlew clean     # cleans existing build artifacts
 ./gradlew build     # builds the project
 ./gradlew test      # runs the unit tests
@@ -26,7 +26,7 @@ git clone buildhttps://github.com/MosDefinatelyNotABot/impact_dot_com_takehome.g
 On windows systems:
 
 ```
-git clone buildhttps://github.com/MosDefinatelyNotABot/impact_dot_com_takehome.git # clone the repository
+git clone build https://github.com/MosDefinatelyNotABot/impact_dot_com_takehome.git # clone the repository
 gradlew.bat clean   # cleans existing build artifacts
 gradlew.bat build   # builds the project
 gradlew.bat test    # runs the unit tests

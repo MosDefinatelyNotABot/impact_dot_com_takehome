@@ -5,7 +5,9 @@ The project was completed using the gradle build system and Java 21.
 
 ## Requirements
 
-
+- Java 21
+- Gradle 7.4
+- Junit 5.10
 
 ## Running the project
 

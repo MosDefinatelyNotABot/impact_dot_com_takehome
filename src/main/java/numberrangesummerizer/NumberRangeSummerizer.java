@@ -1,6 +1,9 @@
 package numberrangesummerizer;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.TreeSet;
 
 /*
 * Assumptions:
@@ -19,21 +22,27 @@ public class NumberRangeSummerizer implements NumberRangeSummerizerInterface {
         String[] numbers = input.split(",");
 
         // TreeSets are ordered and sorted collections.
-        Collection<Integer> out_colection = new TreeSet<>();
+        Collection<Integer> outColection = new TreeSet<>();
 
         // iterate over the input string and add each number to the output collection.
         for (String num : numbers) {
             try {
-                if (num.isBlank()) {continue;}
 
-                out_colection.add(Integer.parseInt(num.strip()));
+                if (num.isBlank()) {
+                    continue;
+                }
+
+                outColection.add(Integer.parseInt(num.strip()));
+
             } catch (NumberFormatException e) {
-                System.out.println("NumberFormatException: %s" + e + "\nERROR: "+ e.getMessage());
+
+                System.out.println("NumberFormatException: %s" + e + "\nERROR: " + e.getMessage());
                 throw e;
+
             }
         }
 
-        return out_colection;
+        return outColection;
     }
 
     public String summarizeCollection(Collection<Integer> input) {
@@ -46,37 +55,37 @@ public class NumberRangeSummerizer implements NumberRangeSummerizerInterface {
             return "";
         }
 
-        ArrayList<String> number_strings = new ArrayList<>();
+        ArrayList<String> numberStrings = new ArrayList<>();
 
         Iterator<Integer> iter = input.iterator();
-        Integer prev_num = iter.next();
-        Integer range_start = prev_num;
+        Integer prevNum = iter.next();
+        Integer rangeNum = prevNum;
 
         while (iter.hasNext()) {
-            Integer current_num = iter.next();
+            Integer currNum = iter.next();
 
-            if (current_num != prev_num + 1) {
+            if (currNum != prevNum + 1) {
                 // Numbers are not consecutive
-                if (range_start.equals(prev_num)) {
-                    number_strings.add(String.valueOf(prev_num));
+                if (rangeNum.equals(prevNum)) {
+                    numberStrings.add(String.valueOf(prevNum));
                 } else {
-                    number_strings.add(range_start + "-" + prev_num);
+                    numberStrings.add(rangeNum + "-" + prevNum);
                 }
-                range_start = current_num;
+                rangeNum = currNum;
             }
 
-            prev_num = current_num;
+            prevNum = currNum;
 
         }
 
         // Add the final number or range
-        if (range_start.equals(prev_num)) {
-            number_strings.add(String.valueOf(prev_num));
+        if (rangeNum.equals(prevNum)) {
+            numberStrings.add(String.valueOf(prevNum));
         } else {
-            number_strings.add(range_start + "-" + prev_num);
+            numberStrings.add(rangeNum + "-" + prevNum);
         }
 
-        return String.join(", ", number_strings);
+        return String.join(", ", numberStrings);
     }
 
 

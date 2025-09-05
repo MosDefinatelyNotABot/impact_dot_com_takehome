@@ -3,7 +3,6 @@ plugins {
     id("checkstyle")
     id("pmd")
 }
-
 group = "org.example"
 version = "1.0-SNAPSHOT"
 

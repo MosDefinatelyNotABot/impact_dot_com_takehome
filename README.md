@@ -1,4 +1,4 @@
-# Imapact.com Take Home Assignment
+# Impact.com Take Home Assignment
 
 The following code repository contains the solution for the Imapact.com Take Home Assignment. 
 The project was completed using the gradle build system and Java 21.
